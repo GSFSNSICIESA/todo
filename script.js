@@ -3,7 +3,7 @@ let task;
 const btn = document.getElementById("enter");
 let tasks = document.querySelector(".tasks");
 let finished = document.querySelector(".finished")
-
+let clrBtn = document.querySelector("#color_btn")
 taskElement.addEventListener("keypress", function(event){
     if(event.key === "Enter"){
         btn.click();
@@ -25,4 +25,12 @@ btn.addEventListener("click", function(){
         tasks.removeChild(div)
         finished.appendChild(newTask)
     })
+})
+
+// function updateColor(){
+    
+// }
+clrBtn.addEventListener("click", function(){
+    let colorPicker = document.querySelector('input[type="color"]')
+    document.querySelector("body").style.backgroundColor = colorPicker.value;
 })
