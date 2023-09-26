@@ -1,5 +1,7 @@
 body{
     background-color: pink;
+    padding: 0;
+    margin: 0;
 }
 ul{
     /* display: flex;
@@ -22,5 +24,11 @@ ul> div > button{
     border-radius: 3px;
     border-color: white;
     box-shadow: none;
+
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
 
 }
