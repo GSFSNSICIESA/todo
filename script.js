@@ -12,18 +12,25 @@ taskElement.addEventListener("keypress", function(event){
 btn.addEventListener("click", function(){
     
     let newTask = document.createElement("li")
+    let doneButton = document.createElement("button")
     let deleteButton = document.createElement("button")
     let div = document.createElement("div")
     task = taskElement.value;
     newTask.appendChild(document.createTextNode(task));
     div.appendChild(newTask)
+    div.appendChild(doneButton)
     div.appendChild(deleteButton)
     tasks.appendChild(div);
     taskElement.value = ""
-    deleteButton.innerText = "Done"
-    deleteButton.addEventListener("click", function(){
+    doneButton.innerText = "Done"
+    deleteButton.innerText = "Delete"
+    doneButton.addEventListener("click", function(){
         tasks.removeChild(div)
         finished.appendChild(newTask)
+
+    })
+    deleteButton.addEventListener("click", function(){
+        tasks.removeChild(div)
     })
 })
 
